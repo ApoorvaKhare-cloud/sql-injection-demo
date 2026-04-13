@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SQL Injection Demo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h2>SQL Injection Demo</h2>
+
+    <form method="POST" action="/login">
+        <label>Username:</label>
+        <input type="text" name="username">
+
+        <label>Password:</label>
+        <input type="text" name="password">
+
+        <label>Mode:</label>
+        <select name="mode">
+            <option value="vulnerable">Vulnerable</option>
+            <option value="secure">Secure</option>
+        </select>
+
+        <button type="submit">Login</button>
+    </form>
+</div>
+
+</body>
+</html>
